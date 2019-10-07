@@ -1,16 +1,15 @@
 <?php
-$con = mysqli_connect("localhost","root","","social");
-if(mysqli_connect_errno()){
-	echo "failed to connect:" . mysqli_connect_errno();
-}
-$query = mysqli_query($con, "INSERT INTO test VALUES ('', 'Darshan') ");
+require 'config/config.php';
+
+
 ?>
-<!DOCTYPE html>
+
 <html>
 <head>
-	<title></title>
+	<title>Campus Social Network</title>
 </head>
 <body>
-hello Darshan Naik
+	hello world
+
 </body>
 </html>

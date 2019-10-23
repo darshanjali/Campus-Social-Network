@@ -1,7 +1,7 @@
 <?php
 ob_start(); //turns on output buffering
 session_start();
-$con = mysqli_connect("localhost","root","","social");
+$con = mysqli_connect("localhost","root","","social1");
 
 $timezone = date_default_timezone_set("Asia/Kolkata");
 

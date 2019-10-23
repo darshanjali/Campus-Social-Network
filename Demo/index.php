@@ -1,14 +1,7 @@
-<?php
-require 'config/config.php';
-
-
-?>
-
-<html>
-<head>
-	<title>Campus Social Network</title>
-</head>
-<body>
+<?php 
+include("includes/header.php");
+session_destroy();
+ ?>
 	hello world
 
 </body>

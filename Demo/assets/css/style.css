@@ -1,0 +1,81 @@
+@font-face{
+	font-family: 'Bellota-LightItalic';
+	src: url(../fonts/Bellota-LightItalic.otf);
+}
+
+@font-face{
+	font-family: 'Bellota-BoldItalic';
+	src: url(../fonts/Bellota-BoldItalic.otf);
+}
+
+body {
+	line-height: 17px;
+}
+
+img {
+	height: 95px;
+	margin: 0px;
+	width: 275px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.top_bar {
+	width: 100%;
+	min-width: 1050px;
+	height: 110px;
+	background-color: #0e2335;
+	border-bottom: 0.4em solid #9fb8c4;
+	margin: 0 0 10px 0;
+	display: inline-flex;
+}
+
+.logo a {
+	font-family: 'Bellota-BoldItalic', sans-serif;
+	margin-left: 10px;
+	font-size: 30;
+	position: relative;
+	top: 9px;
+	text-shadow: #73b6e2 0.5px 0.5px 0px;
+	color: #fff;
+	text-decoration: none;
+}
+
+nav {
+	float: right;
+	right: 1px;
+	position: absolute;
+	margin: 40px;
+}
+
+nav a {
+	position: relative;
+	color:  #9fb8c4;
+	text-decoration: none;
+	font-size: 20px;
+	padding: 15px;
+}
+
+nav a:hover {
+	border-bottom: 7px solid #9fb8c4;
+}
+
+hr {
+	width: 800px;
+}
+
+.profle {
+	height: 130;
+    width: 140px;
+    border-color: #20405f;
+    border-radius: 10%;
+
+}
+
+.profile-sect {
+	margin: 5px;
+}
+
+p {
+	color: #123456;
+}

@@ -62,8 +62,7 @@ class Post {
 			}
 
 			//Check if user who posted, has their account closed
-
-			$added_by_obj = new User($con, $added_by);
+			$added_by_obj = new User($this->con, $added_by);
 			if($added_by_obj->isClosed()) {
 				continue;
 			}
@@ -151,9 +150,21 @@ class Post {
 						</div>
 
 						<div class='posted_by' style='color:#ACACAC;'>
-							<a href='$added_by'> $first_name $last_name </a> $user_to
+							<a href='$added_by'> $first_name last_name </a> $user_to &nbsp;&nbsp;&nbsp;&nbsp;$time_message
+
+						</div>
+						<div id='post_body'>
+							$body
+							<br>
+						</div>
+
+					</div>";
+
+
 
 		}
+
+		echo $str;
 	}
 
 }

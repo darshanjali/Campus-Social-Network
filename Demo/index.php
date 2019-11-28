@@ -1,31 +1,54 @@
 <?php 
 include("includes/header.php");
+include("includes/classes/User.php");
+include("includes/classes/Post.php");
+
+
+if(isset($_POST['post'])) {
+	$post = new Post($con, $userLoggedIn);
+	$post->submitPost($_POST['post_text'], 'none');
+
+}
 
  ?>
-	<!DOCTYPE html>
-	<html>
-	<head>
-		<title>Campus Social Network</title>
-		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	</head>
-	<body>
-		<section class="profile-sect">
-			<img class="profle" src="<?php echo $user['profile_pic']; ?>">
-			<hr /><br>
+	<div class="user_details column">
+		<a href="<?php echo $userLoggedIn; ?>"> <img src="<?php echo $user['profile_pic']; ?>"></a>
+
+		<div class="user_details_left_right">
+			<a href="<?php echo $userLoggedIn; ?>">
+			<?php 
+			echo $user['first_name'] . " " . $user['last_name'];
+
+			?>
+			</a>
+			<br>
+			<?php echo "Posts: " . $user['num_posts']. "<br>";
+			echo "Likes: " . $user['num_likes'];
+
+			?>
+		</div>
+ 
+	</div>	
+
+	<div class="main_column column">
+		<form class="post_form" action="index.php" method="POST">
+			<textarea name="post_text" id="post_text" placeholder="Got something to say?"></textarea>
+			<input type="submit" name="post" id="post_button" value="post">
+			<hr>
+
+		</form>
+
+		<?php 
+
+			$user_obj = new User($con, $userLoggedIn);
+			echo $user_obj->getFirstAndLastName();
+
+
+		 ?>
+
 			
-				<p>USERNAME: <?php echo $user['username']; ?></p>
-				<p>EMAIL: <?php echo $user['email']; ?></p>
-				<p>SIGNUP DATE: <?php echo $user['signup_date']; ?></p>
-				<P>NUMBER OF POSTS: <?php echo $user['num_posts']; ?></P>
-			
-		</section>
-	</body>
-	</html>
-
-	
-	
-	
-
-
+	</div>
+		
+	</div>
 </body>
 </html>

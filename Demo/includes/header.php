@@ -28,10 +28,10 @@ else{
 	<!---single button-->
 	<div class="top_bar">
 		<div class="logo">
-			<a href="index.php"><img src="assets/images/backgrounds/logo.jpeg"/></a>
+			<a href="index.php"><img class="xyz" src="assets/images/backgrounds/logo.jpeg"/></a>
 		</div>
 		<nav>
-			<a href="#">
+			<a href="<?php echo $userLoggedIn; ?>">
 				<?php echo $user['first_name']; ?>
 			
 			<a href="index.php">
@@ -49,5 +49,12 @@ else{
 			<a href="#">
 				<i class="fa fa-cogs fa-2x" aria-hidden="true"></i>
 			</a>
+			<a href="includes/handlers/logout.php">
+				<i class="fa fa-sign-out fa-2x" aria-hidden="true"></i>
+			</a>
+
+
 		</nav>
 	</div>
+
+	<div class="wrapper">

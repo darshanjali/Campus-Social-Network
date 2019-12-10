@@ -104,6 +104,28 @@ class Post {
 					$profile_pic = $user_row['profile_pic'];
 
 
+					?>
+					<script> 
+						function toggle<?php echo $id; ?>() {
+
+							var target = $(event.target);
+							if (!target.is("a")) {
+								var element = document.getElementById("toggleComment<?php echo $id; ?>");
+
+								if(element.style.display == "block") 
+									element.style.display = "none";
+								else 
+									element.style.display = "block";
+							}
+						}
+
+					</script>
+					<?php
+
+					$comments_check = mysqli_query($this->con, "SELECT * FROM comments WHERE post_id='$id'");
+					$comments_check_num = mysqli_num_rows($comments_check);
+
+
 					//Timeframe
 					$date_time_now = date("Y-m-d H:i:s");
 					$start_date = new DateTime($date_time); //Time of post
@@ -115,7 +137,7 @@ class Post {
 						else 
 							$time_message = $interval->y . " years ago"; //1+ year ago
 					}
-					else if ($interval-> m >= 1) {
+					else if ($interval->m >= 1) {
 						if($interval->d == 0) {
 							$days = " ago";
 						}
@@ -168,7 +190,7 @@ class Post {
 						}
 					}
 
-					$str .= "<div class='status_post'>
+					$str .= "<div class='status_post' onClick='javascript:toggle$id()'>
 								<div class='post_profile_pic'>
 									<img src='$profile_pic' width='50'>
 								</div>
@@ -179,11 +201,21 @@ class Post {
 								<div id='post_body'>
 									$body
 									<br>
+									<br>
+									<br>
+								</div>
+
+								<div class='newsfeedPostOptions'>
+									Comments($comments_check_num)&nbsp;&nbsp;&nbsp;
+									<iframe src='like.php?post_id=$id' scrolling='no'></iframe>
 								</div>
 
 							</div>
+							<div class='post_comment' id='toggleComment$id' style='display:none;'>
+								<iframe src='comment_frame.php?post_id=$id' id='comment_iframe' frameborder='0'></iframe>
+							</div>
 							<hr>";
-				
+				}
 
 			} //End while loop
 
@@ -199,7 +231,7 @@ class Post {
 
 	}
 
-}
+
 
 
 }

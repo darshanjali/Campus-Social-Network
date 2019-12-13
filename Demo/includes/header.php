@@ -1,7 +1,7 @@
 <?php  
 require 'config/config.php';
 //include("includes/classes/User.php");
-//include("includes/classes/Post.php");
+//include("includes/classes/Post.php")
 //include("includes/classes/Message.php");
 
 if (isset($_SESSION['username'])) {
@@ -43,6 +43,24 @@ else {
 
 		<div class="logo">
 			<a href="index.php">Campus Social Network</a>
+		</div>
+
+		<div class="search">
+
+			<form action="search.php" method="GET" name="search_form">
+				<input type="text" onkeyup="getLiveSearchUsers(this.value, '<?php echo $userLoggedIn; ?>')" name="q" placeholder="Search..." autocomplete="off" id="search_text_input">
+
+				<div class="button_holder">
+					<img src="assets/images/icons/magnifying_glass.png">
+				</div>
+
+			</form>
+
+			<div class="search_results">
+			</div>
+
+			<div class="search_results_footer_empty">
+			</div>
 		</div>
 
 		<nav>

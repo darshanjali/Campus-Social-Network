@@ -1,4 +1,4 @@
-<!--<?php
+<?php
 class Notification {
 	private $user_obj;
 	private $con;

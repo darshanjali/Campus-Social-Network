@@ -80,7 +80,7 @@ else {
 			<a href="requests.php">
 				<i class="fa fa-users fa-lg"></i>
 			</a>
-			<a href="#">
+			<a href="settings.php">
 				<i class="fa fa-cog fa-lg"></i>
 			</a>
 			<a href="includes/handlers/logout.php">

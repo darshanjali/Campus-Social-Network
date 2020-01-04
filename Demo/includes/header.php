@@ -1,7 +1,7 @@
 <?php  
 require 'config/config.php';
 //include("includes/classes/User.php");
-//include("includes/classes/Post.php")
+//include("includes/classes/Post.php");
 //include("includes/classes/Message.php");
 
 if (isset($_SESSION['username'])) {
@@ -74,10 +74,10 @@ else {
 				<i class="fa fa-envelope fa-lg"></i>
 				
 			</a>
-			<a href="#">
+<!--			<a href="#">
 				<i class="fa fa-bell fa-lg"></i>
 			</a>
-			<a href="requests.php">
+-->			<a href="requests.php">
 				<i class="fa fa-users fa-lg"></i>
 			</a>
 			<a href="settings.php">

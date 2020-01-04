@@ -245,7 +245,7 @@ textarea:focus {
 	height: 100%;
 	float: left;
 	position: relative;
-	background-color: #37B0E9;
+	background-color: #123456;
 	border-right: 10px solid #83D6FE;
 	color: #CBEAF8;
 	margin-right: 20px;
@@ -344,7 +344,7 @@ textarea:focus {
 #message_textarea {
 	width: 70%;
 	margin-right: 8px;
-	margin-left: 297px;
+	margin-left: 20px;
 	border-radius: 5px;
 	border: 1px solid #D3D3D3;
 	font-size: 12px;
@@ -356,7 +356,7 @@ textarea:focus {
 	margin: 0;
 	position: absolute;
 	border:none;
-	background-color: #20AAE5;
+	background-color: #123456;
 	color: #156588;
 	border-radius: 5px;
 	font-family: 'Bellota-BoldItalic', sans-serif;
@@ -372,7 +372,7 @@ textarea:focus {
 }
 
 .message#blue {
-	background-color: #3498db;
+	background-color: #123456;
 	border-color: #2980b9;
 	float: right;
 	margin-bottom: 5px;
@@ -595,4 +595,17 @@ textarea:focus {
     padding: 7px 12px;
     border-radius: 5px;
     color: #fff;
+}
+
+.message .deleteButton {
+   color: #fff;
+   margin: 0 5px 5px 0;
+   cursor: pointer;
+}
+
+.postedImage img {
+	max-height: 300px;
+    max-width: 100%;
+    display: block;
+    margin: 5px auto;
 }
